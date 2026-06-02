@@ -1,0 +1,336 @@
+/* CONFIGURAÇÕES GERAIS */
+:root {
+    --primary-color: #1b4332;
+    --secondary-color: #40916c;
+    --accent-color: #52b788;
+    --text-dark: #2d3748;
+    --text-light: #f7fafc;
+    --bg-light: #f8f9fa;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    background-color: #ffffff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--secondary-color);
+}
+
+.btn-menu {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(40, 145, 108, 0.7)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 140px 0;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.badge {
+    background-color: rgba(255,255,255,0.2);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+/* BOTÕES */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* PILARES */
+.pilares {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 0 auto 15px;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* TECNOLOGIA */
+.tecnologia {
+    padding: 80px 0;
+}
+
+.tech-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.tech-image, .tech-text {
+    flex: 1;
+}
+
+.tech-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.tech-text h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin: 10px 0 20px;
+}
+
+.tech-text p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* FORMULÁRIO DE CONTATO */
+.contato {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.small-container {
+    max-width: 600px;
+}
+
+.form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+/* FOOTER */
+footer {
+    background-color: #111;
+    color: #bbb;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE (MOBILE) */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Esconde o menu no mobile por padrão */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+    }
+    
+    .nav-menu.active {
+        display: flex; /* Mostra o menu via JS */
+    }
+
+    .nav-menu a {
+        margin: 10px 0;
+    }
+
+    .btn-menu {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .tech-container {
+        flex-direction: column;
+    }
+    
+    .btn-secondary {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+}
